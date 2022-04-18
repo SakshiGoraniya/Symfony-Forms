@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Hello!
+{% endblock %}
+
+{% block body %}
+{# <img src="{{ asset('uploads/') ~ image}}"> #}
+ {{ form_start(post_form,{'attr': {
+     'id': 'custom_post_form','class':'some_custom-class'
+ } }) }}
+    {{ form(post_form) }}
+  {{ form_end(post_form) }}   
+
+{% endblock %}
