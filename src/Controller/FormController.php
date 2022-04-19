@@ -44,6 +44,10 @@ class FormController extends AbstractController
             $post->setFile($filename);
             $em->persist($post);
             $em->flush();
+            $this->addFlash(
+                'notice',
+                'Your changes were saved!'
+            );
         }
         # End Add new Post
 
